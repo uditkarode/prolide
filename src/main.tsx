@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./styles/Main.css";
-import Index from "./pages/Index";
+
+const Index = React.lazy(() => import("./pages/Index"));
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Suspense fallback={<h2 style={{ fontSize: 60 }}>Loading.. please wait!</h2>}>
     <Index />
-  </React.StrictMode>,
+  </Suspense>,
   document.getElementById("root")
 );
