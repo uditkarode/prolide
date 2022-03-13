@@ -72,7 +72,7 @@ man('John').
             defaultValue={defaultValue}
             theme="vs-dark"
             options={{
-              fontSize: 22,
+              fontSize: 24,
             }}
             onMount={(editor) => {
               editorRef.current = editor;
@@ -93,6 +93,10 @@ man('John').
             welcomeMessage={"Prolide v0.0.1 Alpha"}
             promptLabel={"?- "}
             style={{ height: "100%" }}
+            contentStyle={{ fontSize: 18 }}
+            inputStyle={{ marginTop: 2.5, marginLeft: 3 }}
+            inputTextStyle={{ fontSize: 20 }}
+            inputAreaStyle={{ marginTop: 20 }}
           />
         </div>
       </div>
